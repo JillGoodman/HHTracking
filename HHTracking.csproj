@@ -1,0 +1,363 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{A21C0F56-3A6A-40A7-BAAB-A795D8CAE74C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>AthleticRegistration</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="ConcussionBaseline.aspx" />
+    <Content Include="ConcussionInformation.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\vendor.css" />
+    <Content Include="Default.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Error.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\animated-climacons\svgs\cloud.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudDrizzle.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudDrizzleAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudDrizzleAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudDrizzleFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudDrizzleMoon.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudDrizzleMoonAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudDrizzleMoonAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudDrizzleMoonFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudDrizzleSun.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudDrizzleSunAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudDrizzleSunAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudDrizzleSunFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudFog.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudFogAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudFogAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudFogFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudFogMoon.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudFogMoonAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudFogMoonAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudFogMoonFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudFogSun.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudFogSunAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudFogSunAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudFogSunFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudHailAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudHailAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudHailAltMoon.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudHailAltMoonFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudHailAltSun.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudHailAltSunFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudLightning.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudLightningFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudLightningMoon.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudLightningMoonFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudLightningSun.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudLightningSunFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudMoon.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudMoonFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudRain.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudRainAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudRainAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudRainFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudRainMoon.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudRainMoonAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudRainMoonAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudRainMoonFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudRainSun.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudRainSunAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudRainSunAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudRainSunFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudSnow.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudSnowAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudSnowAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudSnowFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudSnowMoon.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudSnowMoonAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudSnowMoonAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudSnowMoonFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudSnowSun.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudSnowSunAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudSnowSunAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudSnowSunFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudSun.svg" />
+    <Content Include="fonts\animated-climacons\svgs\cloudSunFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\moon.svg" />
+    <Content Include="fonts\animated-climacons\svgs\moonFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\moonPhase.svg" />
+    <Content Include="fonts\animated-climacons\svgs\moonPhaseFull.svg" />
+    <Content Include="fonts\animated-climacons\svgs\snowflake.svg" />
+    <Content Include="fonts\animated-climacons\svgs\snowflakeFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\sun.svg" />
+    <Content Include="fonts\animated-climacons\svgs\sunFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\sunrise.svg" />
+    <Content Include="fonts\animated-climacons\svgs\sunriseAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\sunriseAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\sunriseFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\sunset.svg" />
+    <Content Include="fonts\animated-climacons\svgs\sunsetAlt.svg" />
+    <Content Include="fonts\animated-climacons\svgs\sunsetAltFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\sunsetFill.svg" />
+    <Content Include="fonts\animated-climacons\svgs\thermometer0.svg" />
+    <Content Include="fonts\animated-climacons\svgs\thermometer100.svg" />
+    <Content Include="fonts\animated-climacons\svgs\thermometer25.svg" />
+    <Content Include="fonts\animated-climacons\svgs\thermometer50.svg" />
+    <Content Include="fonts\animated-climacons\svgs\thermometer75.svg" />
+    <Content Include="fonts\animated-climacons\svgs\tornado.svg" />
+    <Content Include="fonts\animated-climacons\svgs\wind.svg" />
+    <Content Include="fonts\error.svg" />
+    <Content Include="fonts\feather-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\play-pause.svg" />
+    <Content Include="fonts\video-play.svg" />
+    <Content Include="fonts\weathericons-regular-webfont.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\bg1.jpg" />
+    <Content Include="Images\bg2.jpg" />
+    <Content Include="Images\bg3.jpg" />
+    <Content Include="Images\bg4.jpg" />
+    <Content Include="Images\bg5.jpg" />
+    <Content Include="Images\bg6.jpg" />
+    <Content Include="Images\dummy.png" />
+    <Content Include="Images\logo-gray.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\mb-sample.jpg" />
+    <Content Include="Images\placeholder.png" />
+    <Content Include="Images\profile-head.jpg" />
+    <Content Include="Images\profile.jpg" />
+    <Content Include="Images\user\01.jpg" />
+    <Content Include="Images\user\02.jpg" />
+    <Content Include="Images\user\03.jpg" />
+    <Content Include="Images\user\04.jpg" />
+    <Content Include="Images\user\05.jpg" />
+    <Content Include="Images\user\06.jpg" />
+    <Content Include="Images\user\07.jpg" />
+    <Content Include="Images\user\08.jpg" />
+    <Content Include="Logout.aspx" />
+    <Content Include="PhysicalForm.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="PoleVaulting.aspx" />
+    <Content Include="RegisterTeam.aspx" />
+    <Content Include="Residency.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\plugins.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\vendor.js" />
+    <Content Include="Scripts\vendor\modernizr.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Submit.aspx" />
+    <Content Include="SuddenCardiacArrest.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BundleConfig.cs" />
+    <Compile Include="App_Code\DBHelper.cs" />
+    <Compile Include="App_Code\GetInfo.cs" />
+    <Compile Include="App_Code\IdentityModels.cs" />
+    <Compile Include="App_Code\RouteConfig.cs" />
+    <Compile Include="App_Code\Startup.Auth.cs" />
+    <Compile Include="App_Code\Startup.cs" />
+    <Compile Include="App_Code\TokenHelper.cs" />
+    <Compile Include="ConcussionBaseline.aspx.cs">
+      <DependentUpon>ConcussionBaseline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConcussionInformation.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhysicalForm.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoleVaulting.cs" />
+    <Compile Include="RegisterTeam.aspx.cs">
+      <DependentUpon>RegisterTeam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Residency.cs" />
+    <Compile Include="Site.master.cs">
+      <DependentUpon>Site.master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.master.cs">
+      <DependentUpon>Site.Mobile.master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submit.aspx.cs">
+      <DependentUpon>Submit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuddenCardiacArrest.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Account\Web.config" />
+    <None Include="Bundle.config" />
+    <None Include="fonts\animated-climacons\svgs\cloudDrizzleAlt" />
+    <None Include="fonts\feather-webfont.eot" />
+    <None Include="fonts\feather-webfont.ttf" />
+    <None Include="fonts\feather-webfont.woff" />
+    <None Include="fonts\fontawesome-webfont.eot" />
+    <None Include="fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\fontawesome-webfont.woff" />
+    <None Include="fonts\fontawesome-webfont.woff2" />
+    <None Include="fonts\FontAwesome.otf" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="fonts\weathericons-regular-webfont.eot" />
+    <None Include="fonts\weathericons-regular-webfont.ttf" />
+    <None Include="fonts\weathericons-regular-webfont.woff" />
+    <None Include="fonts\weathericons-regular-webfont.woff2" />
+    <None Include="fonts\WeatherIcons-Regular.otf" />
+    <None Include="packages.config" />
+    <None Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="server\calendar\external-calendar.json" />
+    <None Include="server\chart\area.json" />
+    <None Include="server\chart\bar.json" />
+    <None Include="server\chart\barstacked.json" />
+    <None Include="server\chart\donut.json" />
+    <None Include="server\chart\line-single.json" />
+    <None Include="server\chart\line.json" />
+    <None Include="server\chart\linev2.json" />
+    <None Include="server\chart\pie.json" />
+    <None Include="server\chart\spline.json" />
+    <None Include="server\datatables.json" />
+    <None Include="server\treedata.json" />
+    <None Include="server\xeditable-groups.json" />
+    <None Include="Site.master" />
+    <None Include="Site.Mobile.master" />
+    <None Include="Web.config" />
+    <None Include="Web.Debug.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

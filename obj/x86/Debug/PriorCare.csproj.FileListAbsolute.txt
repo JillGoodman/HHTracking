@@ -1,0 +1,2 @@
+C:\LocalHCPSS\ARCopy\PriorCare\obj\x86\Debug\PriorCare.csprojAssemblyReference.cache
+C:\LocalHCPSS\ARCopy\PriorCare\obj\x86\Debug\PriorCare.csproj.CoreCompileInputs.cache

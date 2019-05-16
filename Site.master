@@ -1,0 +1,235 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+<!DOCTYPE html><!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js"><!--<![endif]-->
+  <head runat="server">
+    <meta charset="utf-8">
+    <title>HCPSS - Prior Care</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
+    <link rel="stylesheet" href="Content/main.css">
+    <link rel="stylesheet" href="Content/vendor.css">
+    <script src="scripts/vendor/modernizr.js"></script>
+    <!-- GMaps api-->
+    <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>
+  </head>
+  <body>
+    <!-- Main container-->
+    <div class="app-container">
+      <!-- top navbar-->
+      <header class="bg-primary">
+        <!-- START Top Navbar-->
+        <nav role="navigation" class="navbar topnavbar">
+          <!-- START navbar header-->
+          <div class="navbar-header">
+              <a href="dashboard.html" class="navbar-brand"> 
+                <img src="images/logo.png" alt="App Logo" class="brand-logo">
+              </a>
+            <!-- Mobile buttons-->
+            <div class="mobile-toggles">
+              <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.--><a href="" class="sidebar-toggle"><em class="fa fa-navicon"></em></a>
+              <!-- Button to show/hide the header menu on mobile. Visible on mobile only.--><a href="#nav-collapse" data-toggle="collapse" class="menu-toggle hidden-material"><em class="fa fa-ellipsis-v fa-fw"></em></a>
+            </div>
+          </div>
+          <!-- END navbar header-->
+          <!-- START Nav wrapper-->
+          <div id="nav-collapse" class="nav-wrapper collapse navbar-collapse">
+            <!-- START Left navbar-->
+            <ul class="nav navbar-nav hidden-material">
+              <li>
+                <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops--><a href="" class="hidden-xs sidebar-toggle-off"><em class="fa fa-navicon"></em></a>
+              </li>
+            </ul>
+              <h2 class="hidden-xs" style="width:calc(100% - 225px);float:left;">&nbsp;&nbsp; HCPSS - Prior Care </h2> 
+            <ul class="nav navbar-nav hidden-material">
+           <li uib-dropdown="" class="dropdown dropdown-scale">
+               <a ui-sref="app.default" uib-dropdown-toggle="" ripple="" class="dropdown-toggle" href="Default.aspx">
+                   <em class="fa fa-home"></em>
+                   <span class="visible-xs-inline ml">Home</span>
+               </a>
+           </li>
+           <li uib-dropdown="" class="dropdown dropdown-scale">
+               <a ui-sref="app.default" uib-dropdown-toggle="" ripple="" class="dropdown-toggle" href="Logout.aspx">
+                   <em class="fa fa-sign-out"></em>
+                   <span class="visible-xs-inline ml">Logout</span>
+               </a>
+           </li>
+         </ul>
+            <!-- END Left navbar-->
+          </div>
+          <!-- END Nav wrapper-->
+        </nav>
+        <!-- END Top Navbar-->
+      </header>
+      <!-- Sidebar-->
+      <aside class="bg-white">
+        <!-- START Sidebar-->
+        <div class="sidebar-wrapper">
+          <div data-ui-sidebar="" class="sidebar">
+            <div class="sidebar-nav">
+              <ul class="nav">
+                <!-- Iterates over all sidebar items-->
+                <li class="nav-heading"><span class="text-muted">Main Navigation</span></li>
+                <li><a href="Default.aspx" title="Dashboard" data-ripple="">
+                    <em class="sidebar-item-icon icon-pie-graph"></em><span>Dashboard</span></a></li>
+                    <li><a href="Default.aspx" title="Cards" data-ripple="" runat="server" id="liPriorCareForm" visible="false"><em class="sidebar-item-icon icon-stack"></em><span>Prior Care</span></a></li>
+                    
+                </ul>
+<%--                <li><a href="Submit.aspx" title="Submit" data-ripple="">
+                    <em class="sidebar-item-icon icon-mail"></em><span>Submit</span></a>--%>
+<%--                </li>--%>
+<%--<%--                <li><a href="" title="Layouts" data-ripple=""><em class="sidebar-item-caret fa pull-right fa-angle-right"></em><em class="sidebar-item-icon icon-layout"></em><span>Admin</span></a>
+<%--                  <ul class="nav sidebar-subnav">
+                    <li><a href="Groups.aspx" title="Full Height" data-ripple=""><em class="sidebar-item-icon"></em><span>Groups</span></a></li>
+                    <li class="sidebar-subnav-header"><a href="SportsSeasons.aspx"><em class="sidebar-item-icon fa fa-angle-right"></em>Sport Seasons</a></li>
+                  </ul>--%>
+<%--                <li><a href="" title="Layouts" data-ripple=""><em class="sidebar-item-caret fa pull-right fa-angle-right"></em><em class="sidebar-item-icon icon-layout"></em><span>Reports</span></a><ul class="nav sidebar-subnav">--%>
+        <!-- END Sidebar-->
+                </div>
+              </div>
+            </div>
+      </aside>
+      <!-- Main-->
+      <section>
+        <!-- Content-->
+        <div class="app">
+
+          <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+      </section>
+      <!-- Page footer-->
+      <footer><span>&copy; 2017 - HCPSS </span></footer>
+    </div>
+    <!-- End Settings-->
+    <!-- Layer Morph-->
+    <div class="layer-morph-overlay">
+      <div class="layer-morph-inner bg-info"></div>
+    </div>
+    <div class="layer-morph-close"><em class="icon-cross"></em></div>
+    <div class="layer-morph-container bg-info">
+      <div class="layer-morph-wrapper">
+        <div id="layer-search" class="layer-morph">
+          <form action="#">
+            <p class="help-block">Type and hit enter to search</p>
+            <input type="text" placeholder="I'm looking for..." class="form-control input-huge">
+            <button type="submit" class="hidden">Search</button>
+          </form>
+          <div class="row">
+            <div class="col-md-4 col-sm-6 pv">
+              <h4 class="text-bold pv-lg">People (4)</h4><br>
+              <ul class="list-unstyled">
+                <!-- START User-->
+                <li class="media">
+                  <div class="media-left media-middle">
+                    <!-- Contact avatar-->
+                    <div class="point-pin"><a href=""><img src="images/user/05.jpg" alt="Image" class="media-object img-circle thumb40"></a>
+                      <div class="point point-success point-lg"></div>
+                    </div>
+                  </div>
+                  <!-- Contact info-->
+                  <div class="media-body">
+                    <div class="media-heading"><a href="" class="text-md">Marc Fuller</a></div>
+                  </div>
+                </li>
+                <!-- END User-->
+                <!-- START User-->
+                <li>
+                  <hr>
+                </li>
+                <li class="media">
+                  <div class="media-left media-middle">
+                    <!-- Contact avatar-->
+                    <div class="point-pin"><a href=""><img src="images/user/06.jpg" alt="Image" class="media-object img-circle thumb40"></a>
+                      <div class="point point-success point-lg"></div>
+                    </div>
+                  </div>
+                  <!-- Contact info-->
+                  <div class="media-body">
+                    <div class="media-heading"><a href="" class="text-md">Wade Wade</a></div>
+                  </div>
+                </li>
+                <!-- END User-->
+                <!-- START User-->
+                <li>
+                  <hr>
+                </li>
+                <li class="media">
+                  <div class="media-left media-middle">
+                    <!-- Contact avatar-->
+                    <div class="point-pin"><a href=""><img src="images/user/07.jpg" alt="Image" class="media-object img-circle thumb40"></a>
+                      <div class="point point-danger point-lg"></div>
+                    </div>
+                  </div>
+                  <!-- Contact info-->
+                  <div class="media-body">
+                    <div class="media-heading"><a href="" class="text-md">Alan Boyd</a></div>
+                  </div>
+                </li>
+                <!-- END User-->
+                <!-- START User-->
+                <li>
+                  <hr>
+                </li>
+                <li class="media">
+                  <div class="media-left media-middle">
+                    <!-- Contact avatar-->
+                    <div class="point-pin"><a href=""><img src="images/user/01.jpg" alt="Image" class="media-object img-circle thumb40"></a>
+                      <div class="point point-danger point-lg"></div>
+                    </div>
+                  </div>
+                  <!-- Contact info-->
+                  <div class="media-body">
+                    <div class="media-heading"><a href="" class="text-md">Ryan Carr</a></div>
+                  </div>
+                </li>
+                <!-- END User-->
+              </ul>
+            </div>
+            <div class="col-md-4 col-sm-6 pv">
+              <h4 class="text-bold pv-lg">Pages (3)</h4><br>
+              <ul class="list-unstyled">
+                <li class="media">
+                  <div class="media-left media-middle">
+                    <div class="thumb40 bg-success circle text-center text-bold">D</div>
+                  </div>
+                  <div class="media-body">
+                    <div class="media-heading clearfix"><a href="dashboard.html" data-layer-morph-close="" class="pull-left text-md">Dashboard</a><small class="text-muted pull-right mt">3 matches</small></div>
+                  </div>
+                </li>
+                <li>
+                  <hr>
+                </li>
+                <li class="media">
+                  <div class="media-left media-middle">
+                    <div class="thumb40 bg-purple circle text-center text-bold">P</div>
+                  </div>
+                  <div class="media-body">
+                    <div class="media-heading clearfix"><a href="extras.profile.html" data-layer-morph-close="" class="pull-left text-md">Profile</a><small class="text-muted pull-right mt">3 matches</small></div>
+                  </div>
+                </li>
+                <li>
+                  <hr>
+                </li>
+                <li class="media">
+                  <div class="media-left media-middle">
+                    <div class="thumb40 bg-danger circle text-center text-bold">P</div>
+                  </div>
+                  <div class="media-body">
+                    <div class="media-heading clearfix"><a href="extras.projects.html" data-layer-morph-close="" class="pull-left text-md">Projects</a><small class="text-muted pull-right mt">2 match(es)</small></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="layer-morph-footer">Naut</div>
+      </div>
+    </div>
+    <!-- End Layer Morph-->
+    <script src="scripts/vendor.js"></script>
+    <script src="scripts/plugins.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
